@@ -116,7 +116,7 @@ module.exports = {
     async singleThought(req, res) {
         try {
             const thought = await Thought.findOne(
-                { _id: req.params.courseId}
+                { _id: req.params.thoughtId}
             ).select('-__v')
             if (!thought) {
                 return res.status(404).json({message: "No thought found with that id!"})
@@ -172,10 +172,10 @@ module.exports = {
     },
     async updateReaction(req, res) {
         try  {
-            const { reactionId } = req.body
+            const { newUsername } = req.body
             const thought = await Thought.findOneAndUpdate(
-                { _id: req.params.thoughtid},
-                { $push: {reactions: reactionId} },
+                { "_id": req.params.thoughtid, "reactions.reactionId": req.params.reactionId},
+                { $set: {reactions: reactionId} },
                 { runValidators: true, new: true}
             )
             return res.json(thought)

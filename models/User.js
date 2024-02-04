@@ -12,7 +12,7 @@ const userSchema = new Schema(
             type: String,
             required: true,
             unique: true,
-            match: '/^[^\s@]+@[^\s@]+\.[^\s@]+$'
+            match: [/^[^\s@]+@[^\s@]+\.[^\s@]+$/, "Must match the validation method"]
         },
         thoughts: [
             {
