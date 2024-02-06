@@ -23,7 +23,7 @@
   This application can be used to show hiring managers my work on this topic.
   
   # Credits
-  I worked on this project alone, with the framework provided from the the assignment instructions.  
+  I worked on this project alone, with the framework provided from the the assignment instructions.  I also had help from a tutor to help with certain errors I was having.  
   
   # License
   This project is licensed under the [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) - see the [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)] License file for details..
